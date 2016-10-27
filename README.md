@@ -1,6 +1,10 @@
 # mdp-laboratory
 App for mobile devices programming
 An online store, for a chain of existing stores, with map to locations of stores.
+The app will have products, with details and reviews, and a price chart (price over time).
+The users will have to authenticate, as admins or users.
+Admins will be able to add, delete and modify the products themselves, and everything a normal user can do.
+A user will be able to view any product, write reviews and comments to reviews, and also modify the reviews and comments. They will also be able to send an email directly to the store support, with a form.
 
 ## Requirements
 Each student should define the features for an app that will 
