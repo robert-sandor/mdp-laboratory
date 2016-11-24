@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import LoginComponent from './login.component';
 import MainScreenComponent from './mainscreen.component';
+import EditScreenComponent from './edititem.component';
 
 export default class MDPproject extends Component {
     render() {
@@ -29,6 +30,13 @@ export default class MDPproject extends Component {
                     <MainScreenComponent
                         navigator={_navigator}
                         username={route.username}
+                    />
+                );
+            case 'editScreen':
+                return (
+                    <EditScreenComponent
+                        navigator={_navigator}
+                        product={route.product}
                     />
                 );
         }

@@ -1,7 +1,3 @@
-/**
- * Created by sando on 11/9/2016.
- */
-
 import React, {Component} from 'react';
 import {
     AppRegistry,
@@ -16,26 +12,14 @@ import {
     ListView
 } from 'react-native';
 import Product from "./product";
-import RowComponent from "./row.component";
 
-export default class MainScreenComponent extends Component {
+export default class RowComponent extends Component {
     constructor(props) {
         super(props);
+    }
 
-        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        this.state = {
-            dataSource: ds.cloneWithRows([
-                new Product(1, "product1", 799.99, "description"),
-                new Product(2, "product2", 799.99, "description"),
-                new Product(3, "product3", 799.99, "description"),
-                new Product(4, "product4", 799.99, "description"),
-                new Product(5, "product5", 799.99, "description"),
-                new Product(6, "product6", 799.99, "description"),
-                new Product(7, "product7", 799.99, "description"),
-                new Product(8, "product8", 799.99, "description"),
-                new Product(9, "product9", 799.99, "description")
-            ])
-        };
+    itemPressed() {
+        this.props.navigator.push({id: 'editScreen', product:this.props.product});
     }
 
     render() {
@@ -43,23 +27,17 @@ export default class MainScreenComponent extends Component {
         if (Platform.OS === "android") {
             TouchableElement = TouchableNativeFeedback;
         }
-        return (
-            <View style={styles.container}>
-
-                <ListView
-                    dataSource={this.state.dataSource}
-                    renderRow={(rowData) => {
-                        return (
-                            <RowComponent navigator={this.props.navigator} product={rowData} />
-                        );
-                    }}/>
-
+        return <TouchableElement
+            onPress={this.itemPressed.bind(this)}>
+            <View style={styles.row}>
+                <Text style={styles.buttonText}>{this.props.product.name}</Text>
+                <Text style={styles.buttonText}>{this.props.product.price}</Text>
             </View>
-        );
+        </TouchableElement>;
     }
 }
 
-AppRegistry.registerComponent('ScreenComponent', () => MainScreenComponent);
+AppRegistry.registerComponent('RowComponent', () => RowComponent);
 
 let inputWidth = Dimensions.get('window').width;
 

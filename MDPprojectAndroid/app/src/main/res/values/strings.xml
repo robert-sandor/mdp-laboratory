@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MDPprojectAndroid</string>
+    <string name="search">Search</string>
+    <string name="login">Login</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+</resources>

@@ -27,7 +27,7 @@ export default class LoginComponent extends Component {
             let username = this.state.username;
             let password = this.state.password;
 
-            if (username === 'user' && password === 'password') {
+            if (username === '' && password === '') {
                 this.props.navigator.push({id: 'mainScreen', username: username});
             } else {
                 alert('Login failed! Invalid credentials!');
