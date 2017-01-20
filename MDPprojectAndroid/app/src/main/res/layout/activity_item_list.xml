@@ -27,6 +27,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/searchField"
-        android:layout_alignParentEnd="true"
-        android:hint="@string/search" />
+        android:hint="@string/search"
+        android:layout_toStartOf="@+id/addNewButton" />
+
+    <Button
+        android:text="New"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addNewButton"
+        android:layout_alignBottom="@+id/searchField"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

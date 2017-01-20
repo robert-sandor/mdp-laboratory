@@ -47,8 +47,9 @@ public class EditProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("position", intent.getIntExtra("position", -1));
+                returnIntent.putExtra("id", intent.getIntExtra("id", -1));
                 returnIntent.putExtra("name", nameField.getText().toString());
-                returnIntent.putExtra("price", priceField.getText().toString());
+                returnIntent.putExtra("price", Float.parseFloat(priceField.getText().toString()));
                 returnIntent.putExtra("description", descriptionField.getText().toString());
 
                 setResult(Activity.RESULT_OK, returnIntent);

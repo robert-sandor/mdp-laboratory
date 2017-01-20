@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "46118437098",
+    "firebase_url": "https://mdpprojectandroid.firebaseio.com",
+    "project_id": "mdpprojectandroid",
+    "storage_bucket": "mdpprojectandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46118437098:android:7dfeee1216a36e6b",
+        "android_client_info": {
+          "package_name": "org.robertsandor.mdpprojectandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46118437098-98ihn4el2fbiqskfqqs7i3sgcevsc4na.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7UhR8xIbwPSoG3wBy8ZLu2S7oxiauQ04"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
